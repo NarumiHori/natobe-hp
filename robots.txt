@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://narumihori.github.io/natobe-hp/sitemap.xml
+Sitemap: https://natobe.narubusiness1.workers.dev/sitemap.xml

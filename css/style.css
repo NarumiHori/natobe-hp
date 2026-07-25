@@ -143,6 +143,9 @@ h1, h2, h3, h4 { line-height: 1.5; font-weight: 900; letter-spacing: .01em; }
 }
 .section-head--left .section-lead { margin-inline: 0; }
 
+/* 改行はPC幅でだけ効かせる（狭い画面では自然な折り返しに任せる） */
+.br-pc { display: inline; }
+
 .text-brand { color: var(--brand); }
 .marker {
   background: linear-gradient(transparent 62%, rgba(230, 57, 70, .18) 62%);

@@ -1019,6 +1019,8 @@ h1, h2, h3, h4 { line-height: 1.5; font-weight: 900; letter-spacing: .01em; }
 @media (max-width: 768px) {
   :root { --header-h: 64px; }
 
+  .br-pc { display: none; }
+
   .section { padding: 68px 0; }
   .section--tight { padding: 52px 0; }
   .section-head { margin-bottom: 40px; }

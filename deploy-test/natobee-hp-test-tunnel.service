@@ -1,0 +1,16 @@
+[Unit]
+Description=ナトビーHP テスト版の外向き入口（Cloudflareクイックトンネル）
+# ローカル配信とネットワークの準備後にトンネルを開始する。
+After=network-online.target natobee-hp-test.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=narumi
+# 経理サイトと競合しない専用の配信・メトリクスポートを使う。
+ExecStart=/usr/bin/cloudflared tunnel --no-autoupdate --url http://127.0.0.1:8081 --metrics 127.0.0.1:20242
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

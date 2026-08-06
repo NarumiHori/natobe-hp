@@ -1,0 +1,17 @@
+[Unit]
+Description=ナトビーHP テスト版（v3）のローカル配信
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=narumi
+Group=narumi
+# 専用設定を直接指定し、既存の経理サイト用Caddy設定とは分離する。
+ExecStart=/usr/bin/caddy run --config /home/narumi/claude-projects/natobee-hp/deploy-test/Caddyfile --adapter caddyfile
+ExecReload=/usr/bin/caddy reload --config /home/narumi/claude-projects/natobee-hp/deploy-test/Caddyfile --adapter caddyfile
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

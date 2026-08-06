@@ -1,0 +1,9 @@
+[Unit]
+Description=ナトビーHP テスト版のトンネルURL変更確認
+After=natobee-hp-test-tunnel.service
+
+[Service]
+Type=oneshot
+User=narumi
+# URL変更の判定と通知は専用スクリプトへ集約する。
+ExecStart=/home/narumi/claude-projects/natobee-hp/deploy-test/tunnel-url-watch.sh

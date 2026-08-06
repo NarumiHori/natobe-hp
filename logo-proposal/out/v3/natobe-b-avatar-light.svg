@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img">
+  <defs><linearGradient id="natobe_b_avatar_light_gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4FC8F5"/><stop offset="50%" stop-color="#1F63D6"/><stop offset="100%" stop-color="#122E6B"/></linearGradient></defs>
+  <rect width="512" height="512" fill="#FFFFFF"/><g transform="translate(56.32 56.32) scale(3.328)"><path d="M 44 9 L 76 9 Q 88 9 93.775 19.519 L 110.225 49.481 Q 116 60 110.225 70.519 L 93.775 100.481 Q 88 111 76 111 L 44 111 Q 32 111 26.225 100.481 L 9.775 70.519 Q 4 60 9.775 49.481 L 26.225 19.519 Q 32 9 44 9 Z" fill="url(#natobe_b_avatar_light_gradient)"/><path d="M 40.35 35.44 L 40.35 84.56 Q 40.35 87.56 42.948 86.059 L 85.452 61.501 Q 88.05 60 85.452 58.499 L 42.948 33.941 Q 40.35 32.44 40.35 35.44 Z" fill="#FFFFFF"/></g>
+</svg>

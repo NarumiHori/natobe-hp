@@ -1,0 +1,32 @@
+{
+	# テスト配信専用のため、管理API・自動HTTPS・設定永続化を使わない。
+	admin off
+	auto_https off
+	persist_config off
+}
+
+http://:8081 {
+	# 待ち受けはローカルだけ（外へはcloudflaredトンネル経由）。ホスト名を限定すると
+	# トンネル経由のHost（*.trycloudflare.com）が一致せず空応答になるため、アドレスは:8081のまま。
+	bind 127.0.0.1
+	root * /home/narumi/claude-projects/natobee-hp/draft-v3/site
+	encode zstd gzip
+
+	# テストサイトが検索結果やキャッシュに残らないよう全応答へ付与する。
+	header X-Robots-Tag "noindex, nofollow, noarchive"
+
+	# 実ファイルに依存せず、クローラーへサイト全体の巡回禁止を伝える。
+	respond /robots.txt <<ROBOTS
+		User-agent: *
+		Disallow: /
+		ROBOTS 200
+
+	# 拡張子なしURLとディレクトリURLの静的ページを解決する。
+	try_files {path} {path}.html {path}/index.html
+	file_server
+
+	# systemd journalで確認できるようアクセスログを標準出力へ送る。
+	log {
+		output stdout
+	}
+}

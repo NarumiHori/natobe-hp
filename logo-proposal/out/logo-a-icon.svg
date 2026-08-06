@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img">
+  <defs><linearGradient id="logo_a_icon_gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#63E0E6"/><stop offset="52%" stop-color="#24A6DA"/><stop offset="100%" stop-color="#1667C4"/></linearGradient></defs>
+  <rect x="4" y="4" width="112" height="112" rx="32" ry="32" fill="url(#logo_a_icon_gradient)"/><path d="M 47 43 L 47 77 Q 47 86 54.652 81.263 L 81.348 64.737 Q 89 60 81.348 55.263 L 54.652 38.737 Q 47 34 47 43 Z" fill="#FFFFFF"/>
+</svg>

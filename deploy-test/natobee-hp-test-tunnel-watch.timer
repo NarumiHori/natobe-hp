@@ -1,0 +1,11 @@
+[Unit]
+Description=ナトビーHP テスト版のトンネルURLを5分ごとに確認
+
+[Timer]
+# 毎時0分から5分間隔で確認し、停止中の実行漏れも復帰時に補う。
+OnCalendar=*:0/5
+Persistent=true
+Unit=natobee-hp-test-tunnel-watch.service
+
+[Install]
+WantedBy=timers.target
